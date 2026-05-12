@@ -1,0 +1,710 @@
+
+Alyssa-Wilson-Resume.pdf <
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alyssa Wilson professional portfolio, resume, technical projects, and contact information." />
+  <title>Alyssa Wilson | Professional Portfolio</title>
+
+  <style>
+    :root {
+      --sage: #A3B18A;
+      --dusty-rose: #C08497;
+      --warm-beige: #D6CCC2;
+      --terracotta: #9C6644;
+      --deep-olive: #6B705C;
+      --charcoal: #2F2F2F;
+      --cream: #F7F2EA;
+      --soft-white: #FFFDF8;
+      --shadow: rgba(47, 47, 47, 0.16);
+      --border: rgba(107, 112, 92, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top left, rgba(192, 132, 151, 0.22), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(163, 177, 138, 0.26), transparent 35%),
+        linear-gradient(135deg, #F7F2EA 0%, #D6CCC2 100%);
+      color: var(--charcoal);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page-shell {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(247, 242, 234, 0.82);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--deep-olive);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.88rem;
+      color: var(--charcoal);
+    }
+
+    .nav-links a {
+      opacity: 0.8;
+      transition: opacity 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+      color: var(--terracotta);
+    }
+
+    .hero {
+      padding: 78px 0 52px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--terracotta);
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 7vw, 5.8rem);
+      line-height: 0.94;
+      color: var(--charcoal);
+      letter-spacing: -0.06em;
+      margin-bottom: 22px;
+    }
+
+    .hero-subtitle {
+      max-width: 720px;
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      color: rgba(47, 47, 47, 0.82);
+      margin-bottom: 28px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px var(--shadow);
+    }
+
+    .btn-primary {
+      background: var(--deep-olive);
+      color: var(--soft-white);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 253, 248, 0.62);
+      color: var(--charcoal);
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(255, 253, 248, 0.55);
+      border: 1px solid var(--border);
+      color: var(--deep-olive);
+      font-weight: 700;
+    }
+
+    .hero-card {
+      background: rgba(255, 253, 248, 0.64);
+      border: 1px solid var(--border);
+      box-shadow: 0 24px 70px var(--shadow);
+      border-radius: 34px;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(156, 102, 68, 0.2);
+      border-radius: 26px;
+      pointer-events: none;
+    }
+
+    .profile-circle {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background:
+        linear-gradient(135deg, rgba(192, 132, 151, 0.9), rgba(163, 177, 138, 0.88)),
+        var(--warm-beige);
+      display: grid;
+      place-items: center;
+      color: var(--soft-white);
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      box-shadow: inset 0 0 0 8px rgba(255, 253, 248, 0.28);
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      color: var(--deep-olive);
+    }
+
+    .card-copy {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      color: rgba(47, 47, 47, 0.74);
+      margin-bottom: 22px;
+    }
+
+    .quick-info {
+      display: grid;
+      gap: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+    }
+
+    .quick-info span {
+      display: block;
+      padding: 10px 12px;
+      background: rgba(247, 242, 234, 0.72);
+      border-radius: 16px;
+      border: 1px solid rgba(107, 112, 92, 0.16);
+    }
+
+    section {
+      padding: 46px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: var(--deep-olive);
+    }
+
+    .section-note {
+      max-width: 440px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgba(47, 47, 47, 0.72);
+      font-size: 0.96rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .panel {
+      background: rgba(255, 253, 248, 0.58);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 16px 44px rgba(47, 47, 47, 0.08);
+    }
+
+    .panel h3 {
+      color: var(--terracotta);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .panel p,
+    .panel li {
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgba(47, 47, 47, 0.76);
+      font-size: 0.96rem;
+    }
+
+    .panel ul {
+      padding-left: 18px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .skill-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 0.84rem;
+      color: var(--charcoal);
+      background: rgba(214, 204, 194, 0.65);
+      border: 1px solid rgba(107, 112, 92, 0.18);
+      border-radius: 999px;
+      padding: 8px 12px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .project-card .btn {
+      width: fit-content;
+      margin-top: auto;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline-item {
+      padding-left: 18px;
+      border-left: 3px solid var(--sage);
+    }
+
+    .timeline-item strong {
+      display: block;
+      color: var(--deep-olive);
+      font-size: 1.05rem;
+      margin-bottom: 3px;
+    }
+
+    .contact-band {
+      background: rgba(47, 47, 47, 0.9);
+      color: var(--soft-white);
+      border-radius: 36px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      box-shadow: 0 24px 70px rgba(47, 47, 47, 0.22);
+    }
+
+    .contact-band h2 {
+      color: var(--soft-white);
+      margin-bottom: 10px;
+    }
+
+    .contact-band p {
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgba(255, 253, 248, 0.78);
+      max-width: 640px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    .contact-actions .btn-primary {
+      background: var(--sage);
+      color: var(--charcoal);
+    }
+
+    .contact-actions .btn-secondary {
+      color: var(--soft-white);
+      background: rgba(255, 253, 248, 0.1);
+      border-color: rgba(255, 253, 248, 0.28);
+    }
+
+    footer {
+      padding: 30px 0 50px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgba(47, 47, 47, 0.62);
+      font-size: 0.88rem;
+    }
+
+    .placeholder-note {
+      margin-top: 12px;
+      padding: 12px 14px;
+      background: rgba(156, 102, 68, 0.1);
+      border: 1px dashed rgba(156, 102, 68, 0.36);
+      border-radius: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgba(47, 47, 47, 0.7);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 850px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .hero,
+      .grid-2,
+      .grid-3,
+      .contact-band {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 54px;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .contact-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media print {
+      .top-nav,
+      .button-row,
+      .contact-actions {
+        display: none;
+      }
+
+      body {
+        background: white;
+      }
+
+      .panel,
+      .hero-card,
+      .contact-band {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <a class="logo" href="#top">Alyssa Wilson</a>
+      <div class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top" class="page-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Military Spouse • MSSA Student • People-First IT</p>
+        <h1>Cloud, clarity, and human-centered support.</h1>
+        <p class="hero-subtitle">
+          I’m Alyssa Wilson — a client-focused IT professional building a career in cloud and server administration through the Microsoft Software & Systems Academy. I blend technical training, user support, process improvement, and warm communication to help people feel confident with technology.
+        </p>
+
+        <div class="button-row">
+          <a class="btn btn-primary" href="Alyssa-Wilson-Resume.pdf" target="_blank" rel="noopener">View Resume</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/REPLACE-WITH-YOUR-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-secondary" href="https://github.com/alyssamarwilson" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-secondary" href="mailto:alyssa.mar.wilson@gmail.com">Email Me</a>
+        </div>
+
+        <div class="hero-tags" aria-label="Professional keywords">
+          <span class="tag">Azure</span>
+          <span class="tag">Windows Server</span>
+          <span class="tag">Active Directory</span>
+          <span class="tag">PowerShell</span>
+          <span class="tag">Customer Success</span>
+          <span class="tag">Training & Enablement</span>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Professional summary card">
+        <div class="profile-circle" aria-hidden="true">AW</div>
+        <h2 class="card-title">Professional Snapshot</h2>
+        <p class="card-copy">
+          Calm under pressure, naturally curious, and energized by helping people understand complex systems without making them feel overwhelmed.
+        </p>
+        <div class="quick-info">
+          <span><strong>Current Focus:</strong> Network & Cloud Administration</span>
+          <span><strong>Program:</strong> Microsoft Software & Systems Academy</span>
+          <span><strong>Location:</strong> San Antonio, Texas</span>
+          <span><strong>Career Interests:</strong> Customer Success, Adoption, Program Management, Cloud Support</span>
+        </div>
+      </aside>
+    </header>
+
+    <section id="about">
+      <div class="section-heading">
+        <h2>About</h2>
+        <p class="section-note">
+          A quick introduction for recruiters, hiring managers, mentors, and professional connections.
+        </p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="panel">
+          <h3>Who I Am</h3>
+          <p>
+            I’m a career-changing IT professional with a background in operations, community programming, training, digital literacy, and customer-facing support. My strength is translating technical information into clear, approachable guidance so people feel supported instead of stuck.
+          </p>
+        </article>
+
+        <article class="panel">
+          <h3>What I’m Building Toward</h3>
+          <p>
+            I’m currently developing hands-on skills in cloud, server administration, identity, networking, automation, and troubleshooting while exploring people-facing technical roles where communication and adoption matter just as much as configuration.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-heading">
+        <h2>Technical Skills</h2>
+        <p class="section-note">
+          Tools, concepts, and strengths I’m actively learning, practicing, and applying through labs and projects.
+        </p>
+      </div>
+
+      <div class="panel">
+        <div class="skill-cloud">
+          <span class="skill">Microsoft Azure</span>
+          <span class="skill">Microsoft Entra ID</span>
+          <span class="skill">Windows Server</span>
+          <span class="skill">Active Directory</span>
+          <span class="skill">DNS</span>
+          <span class="skill">DHCP</span>
+          <span class="skill">Group Policy</span>
+          <span class="skill">PowerShell</span>
+          <span class="skill">GitHub</span>
+          <span class="skill">Linux Fundamentals</span>
+          <span class="skill">Virtual Machines</span>
+          <span class="skill">Hyper-V</span>
+          <span class="skill">Role-Based Access Control</span>
+          <span class="skill">Technical Documentation</span>
+          <span class="skill">Customer Success</span>
+          <span class="skill">Training & Enablement</span>
+          <span class="skill">Process Improvement</span>
+          <span class="skill">End-User Support</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-heading">
+        <h2>Featured Projects</h2>
+        <p class="section-note">
+          A place to highlight hands-on labs, GitHub work, learning projects, and creative technical documentation.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="panel project-card">
+          <h3>Complex Systems, Simply Explained</h3>
+          <p>
+            A creative GitHub project that explains technical concepts like DHCP, DNS, Active Directory, PowerShell, Linux, and Azure using beginner-friendly metaphors and visuals.
+          </p>
+          <br />
+          <a class="btn btn-secondary" href="https://github.com/alyssamarwilson/complex-systems-simply-explained" target="_blank" rel="noopener">View Project</a>
+        </article>
+
+        <article class="panel project-card">
+          <h3>Windows Server & Identity Labs</h3>
+          <p>
+            Hands-on practice with server configuration, identity concepts, access control, Group Policy, DNS, DHCP, and user-focused troubleshooting scenarios.
+          </p>
+          <br />
+          <a class="btn btn-secondary" href="#contact">Ask Me About It</a>
+        </article>
+
+        <article class="panel project-card">
+          <h3>Cloud & Adoption Storytelling</h3>
+          <p>
+            Documentation and learning content focused on explaining cloud concepts in practical language for non-technical users, teams, and stakeholders.
+          </p>
+          <br />
+          <a class="btn btn-secondary" href="#contact">Connect</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-heading">
+        <h2>Experience Highlights</h2>
+        <p class="section-note">
+          A recruiter-friendly snapshot of the value I bring from both technical training and professional experience.
+        </p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="panel">
+          <h3>Professional Strengths</h3>
+          <ul>
+            <li>Translate complex information into clear, human-friendly explanations.</li>
+            <li>Support users with patience, empathy, and structured troubleshooting.</li>
+            <li>Create processes, training materials, and workflows that make teams stronger.</li>
+            <li>Build trust quickly in fast-paced, people-centered environments.</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <h3>Career Timeline</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <strong>Microsoft Software & Systems Academy</strong>
+              <p>Network & Cloud Administration technical training focused on cloud, server, identity, networking, and automation fundamentals.</p>
+            </div>
+            <div class="timeline-item">
+              <strong>Operations, Programming & Community Support</strong>
+              <p>Experience supporting patrons, families, teams, programs, digital literacy, customer service, and process improvement.</p>
+            </div>
+            <div class="timeline-item">
+              <strong>Creative Communication & Content</strong>
+              <p>Built community-centered content, storytelling projects, and approachable learning resources designed to connect with real people.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="qr">
+      <div class="section-heading">
+        <h2>QR Code Ready</h2>
+        <p class="section-note">
+          Once this site is live, use the Azure Static Web Apps URL to generate a QR code for your resume, job fair handout, LinkedIn banner, or business card.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Suggested QR Label</h3>
+        <p>
+          Scan to view my digital portfolio, resume, GitHub projects, and contact information.
+        </p>
+        <p class="placeholder-note">
+          Replace this note later with your actual QR image if you want the QR code displayed directly on the site. The QR should point to your final Azure Static Web Apps URL.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-band">
+        <div>
+          <h2>Let’s connect.</h2>
+          <p>
+            I’m interested in opportunities where cloud fundamentals, customer success, technical support, adoption, training, and human-centered communication come together.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:alyssa.mar.wilson@gmail.com">Email Me</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/REPLACE-WITH-YOUR-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-secondary" href="https://github.com/alyssamarwilson" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Alyssa Wilson. Built as a static portfolio for Azure Static Web Apps.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
