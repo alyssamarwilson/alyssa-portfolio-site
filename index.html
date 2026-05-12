@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,7 +102,7 @@
     }
 
     .hero {
-      padding: 78px 0 52px;
+      padding: 72px 0 44px;
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
       gap: 36px;
@@ -206,20 +205,14 @@
       pointer-events: none;
     }
 
-    .profile-circle {
+    .profile-photo {
       width: 140px;
       height: 140px;
       border-radius: 50%;
-      background:
-        linear-gradient(135deg, rgba(192, 132, 151, 0.9), rgba(163, 177, 138, 0.88)),
-        var(--warm-beige);
-      display: grid;
-      place-items: center;
-      color: var(--soft-white);
-      font-size: 3rem;
-      font-weight: 700;
+      object-fit: cover;
       margin-bottom: 24px;
-      box-shadow: inset 0 0 0 8px rgba(255, 253, 248, 0.28);
+      border: 6px solid rgba(255, 253, 248, 0.72);
+      box-shadow: 0 12px 28px rgba(47, 47, 47, 0.18);
     }
 
     .card-title {
@@ -252,7 +245,7 @@
     }
 
     section {
-      padding: 46px 0;
+      padding: 38px 0;
     }
 
     .section-heading {
@@ -288,6 +281,14 @@
 
     .grid-2 {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    .equal-grid {
+      align-items: stretch;
+    }
+
+    .equal-grid .panel {
+      height: 100%;
     }
 
     .panel {
@@ -337,7 +338,12 @@
     .project-card {
       display: flex;
       flex-direction: column;
+      gap: 14px;
       min-height: 100%;
+    }
+
+    .project-card p {
+      flex: 1;
     }
 
     .project-card .btn {
@@ -347,7 +353,7 @@
 
     .timeline {
       display: grid;
-      gap: 16px;
+      gap: 14px;
     }
 
     .timeline-item {
@@ -362,17 +368,21 @@
       margin-bottom: 3px;
     }
 
-   .contact-band {
-  background: rgba(47, 47, 47, 0.9);
-  color: var(--soft-white);
-  border-radius: 28px;
-  padding: 22px 26px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 18px;
-  align-items: center;
-  box-shadow: 0 16px 40px rgba(47, 47, 47, 0.18);
-} 
+    #contact {
+      padding-bottom: 24px;
+    }
+
+    .contact-band {
+      background: rgba(47, 47, 47, 0.9);
+      color: var(--soft-white);
+      border-radius: 28px;
+      padding: 24px 28px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      box-shadow: 0 16px 40px rgba(47, 47, 47, 0.18);
+    }
 
     .contact-band h2 {
       color: var(--soft-white);
@@ -404,22 +414,11 @@
     }
 
     footer {
-      padding: 30px 0 50px;
+      padding: 24px 0 42px;
       text-align: center;
       font-family: Arial, Helvetica, sans-serif;
       color: rgba(47, 47, 47, 0.62);
       font-size: 0.88rem;
-    }
-
-    .placeholder-note {
-      margin-top: 12px;
-      padding: 12px 14px;
-      background: rgba(156, 102, 68, 0.1);
-      border: 1px dashed rgba(156, 102, 68, 0.36);
-      border-radius: 16px;
-      font-family: Arial, Helvetica, sans-serif;
-      color: rgba(47, 47, 47, 0.7);
-      font-size: 0.9rem;
     }
 
     @media (max-width: 850px) {
@@ -477,6 +476,7 @@
   <nav class="top-nav">
     <div class="nav-inner">
       <a class="logo" href="#top">Alyssa Wilson</a>
+
       <div class="nav-links" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -491,7 +491,9 @@
     <header class="hero">
       <div>
         <p class="eyebrow">Military Spouse • MSSA Student • People-First IT</p>
+
         <h1>Cloud, clarity, and human-centered support.</h1>
+
         <p class="hero-subtitle">
           I’m Alyssa Wilson — a client-focused IT professional building a career in cloud and server administration through the Microsoft Software & Systems Academy. I blend technical training, user support, process improvement, and warm communication to help people feel confident with technology.
         </p>
@@ -514,11 +516,14 @@
       </div>
 
       <aside class="hero-card" aria-label="Professional summary card">
-        <img class="unnamed" src="images/unnamed.jpg" alt="Professional photo of Alyssa Wilson">
+        <img class="profile-photo" src="images/unnamed.jpg" alt="Professional photo of Alyssa Wilson">
+
         <h2 class="card-title">Professional Snapshot</h2>
+
         <p class="card-copy">
           Calm under pressure, naturally curious, and energized by helping people understand complex systems without making them feel overwhelmed.
         </p>
+
         <div class="quick-info">
           <span><strong>Current Focus:</strong> Network & Cloud Administration</span>
           <span><strong>Program:</strong> Microsoft Software & Systems Academy</span>
@@ -536,7 +541,7 @@
         </p>
       </div>
 
-      <div class="grid grid-2">
+      <div class="grid grid-2 equal-grid">
         <article class="panel">
           <h3>Who I Am</h3>
           <p>
@@ -589,39 +594,46 @@
       <div class="section-heading">
         <h2>Featured Projects</h2>
         <p class="section-note">
-          A place to highlight hands-on labs, GitHub work, learning projects, and creative technical documentation.
+          Hands-on labs, GitHub work, learning projects, and creative technical documentation.
         </p>
       </div>
 
-      <div class="grid grid-3">
+      <div class="grid grid-3 equal-grid">
         <article class="panel project-card">
           <h3>Complex Systems, Simply Explained</h3>
           <p>
-            A creative GitHub project that explains technical concepts like DHCP, DNS, Active Directory, PowerShell, Linux, and Azure using beginner-friendly metaphors and visuals.
+            A creative GitHub project that explains DHCP, DNS, Active Directory, PowerShell, Linux, and Azure using beginner-friendly metaphors and visuals.
           </p>
-          <br />
           <a class="btn btn-secondary" href="https://github.com/alyssamarwilson/complex-systems-simply-explained" target="_blank" rel="noopener">View Project</a>
         </article>
 
-<article class="panel project-card">
-  <h3>Career Walking Deck</h3>
-  <p>
-    A visual snapshot of my professional story, MSSA technical training, people-first strengths, transferable experience, values, and career direction.
-  </p>
-  <br />
-  <a class="btn btn-secondary" href="Alyssa-Wilson-Career-Walking-Deck.pdf" target="_blank" rel="noopener">View Career Walking Deck</a>
-</article>
-        
-     <article class="panel project-card">
-  <h3>Cloud & Adoption Storytelling</h3>
-  <p>
-    Documentation and learning content focused on explaining cloud concepts in practical language for non-technical users, teams, and stakeholders.
-  </p>
-  <br />
-  <a class="btn btn-secondary" href="#contact">Connect</a>
-</article>
+        <article class="panel project-card">
+          <h3>Career Walking Deck</h3>
+          <p>
+            A visual snapshot of my professional story, MSSA technical training, transferable experience, values, and career direction.
+          </p>
+          <a class="btn btn-secondary" href="Alyssa-Wilson-Career-Walking-Deck.pdf" target="_blank" rel="noopener">View Deck</a>
+        </article>
 
-      <div class="grid grid-2">
+        <article class="panel project-card">
+          <h3>Cloud & Adoption Storytelling</h3>
+          <p>
+            Learning content focused on explaining cloud concepts in practical language for non-technical users, teams, and stakeholders.
+          </p>
+          <a class="btn btn-secondary" href="#contact">Connect</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-heading">
+        <h2>Experience</h2>
+        <p class="section-note">
+          A blend of technical growth, people-first support, communication, and process improvement.
+        </p>
+      </div>
+
+      <div class="grid grid-2 equal-grid">
         <article class="panel">
           <h3>Professional Strengths</h3>
           <ul>
@@ -634,25 +646,28 @@
 
         <article class="panel">
           <h3>Career Timeline</h3>
+
           <div class="timeline">
             <div class="timeline-item">
               <strong>Microsoft Software & Systems Academy</strong>
-              <p>Network & Cloud Administration technical training focused on cloud, server, identity, networking, and automation fundamentals.</p>
+              <p>Network & Cloud Administration training focused on cloud, server, identity, networking, and automation fundamentals.</p>
             </div>
+
             <div class="timeline-item">
-              <strong>Operations, Programming & Community Support</strong>
+              <strong>Operations & Community Support</strong>
               <p>Experience supporting patrons, families, teams, programs, digital literacy, customer service, and process improvement.</p>
             </div>
+
             <div class="timeline-item">
-              <strong>Creative Communication & Content</strong>
+              <strong>Creative Communication</strong>
               <p>Built community-centered content, storytelling projects, and approachable learning resources designed to connect with real people.</p>
             </div>
           </div>
         </article>
       </div>
     </section>
-        
-     <section id="contact">
+
+    <section id="contact">
       <div class="contact-band">
         <div>
           <h2>Let’s connect.</h2>
@@ -660,6 +675,7 @@
             I’m interested in opportunities where cloud fundamentals, customer success, technical support, adoption, training, and human-centered communication come together.
           </p>
         </div>
+
         <div class="contact-actions">
           <a class="btn btn-primary" href="mailto:alyssa.mar.wilson@outlook.com">Email Me</a>
           <a class="btn btn-secondary" href="https://www.linkedin.com/in/alyssa-mar-wilson" target="_blank" rel="noopener">LinkedIn</a>
@@ -669,7 +685,7 @@
     </section>
   </main>
 
- <footer>
+  <footer>
     <p>© 2026 Alyssa Wilson. Built as a static portfolio for Azure Static Web Apps.</p>
   </footer>
 </body>
